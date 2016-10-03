@@ -12,9 +12,9 @@
 <body>
     <h1>Hello</h1>
 
-    <ul>
+    <ul class="list-group">
         <?php foreach ($person as $key => $feature) : ?>
-            <li><strong><?= $key ?></strong>:<?= $feature ?>
+            <li class="list-group-item"><strong><?= $key ?></strong>:<?= $feature ?>
         <?php endforeach ?>
     </ul>
 
