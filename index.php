@@ -17,7 +17,7 @@ $task = [
     'title' => 'Finish Homework',
     'due' => 'today',
     'assigned_to' => 'Tom',
-    'completed' => false
+    'completed' => true
     ];
 
 //var_dump($task);
