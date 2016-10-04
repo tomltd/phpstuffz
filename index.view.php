@@ -12,10 +12,31 @@
 <body>
     <h1>Hello</h1>
 
-    <ul class="list-group">
-        <?php foreach ($person as $key => $feature) : ?>
+
+    <!-- <ul class="list-group">
+            <?php foreach ($person as $key => $feature) : ?>
             <li class="list-group-item"><strong><?= $key ?></strong>:<?= $feature ?>
         <?php endforeach ?>
+    </ul> -->
+
+
+    <ul class="list-group">
+        <li class='list-group-item'>
+            <strong>Name: </strong><?= $task['title']; ?>
+        </li>
+
+        <li class='list-group-item'>
+            <strong>Due Date: </strong><?= $task['due']; ?>
+        </li>
+
+        <li class='list-group-item'>
+            <strong>Person Responsible </strong><?= $task['assigned_to']; ?>
+        </li>
+
+        <li class='list-group-item'>
+            <strong>Status: </strong><?= $task['completed'] ? 'Completed' : 'Incomplete'; ?>
+        </li>
+
     </ul>
 
 
