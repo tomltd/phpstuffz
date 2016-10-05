@@ -1,40 +1,54 @@
 <?php
+
 require 'functions.php';
 
-
-class Task {
-
-    public $description;
-    public $completed = false;
-
-    // A method if defined in a class
-    public function __construct($description)
-    {
-        // Automatically triggered on instantiation
-        // Setting a property in this instance (object)
-        $this->description = $description;
-    }
-
-    public function isCompleted()
-    {
-        return $this->completed;
-    }
-
-    public function complete()
-    {
-        $this->completed = true;
-    }
-
-
+try {
+    $pdo = new PDO('mysql:host=192.168.10.10;dbname=mytodos2', 'mytodos2', 'mytodos2');
+} catch (PDOexception $e) {
+    die('Could not connect');
 }
 
-$tasks = [
-    new Task('Go to the store'),
-    new Task('Finish learning stuff'),
-    new Task('Slacklining')
-];
+require 'index.view.php';
 
-$tasks[0]->complete();
+
+
+
+
+
+//
+// class Task {
+//
+//     public $description;
+//     public $completed = false;
+//
+//     // A method if defined in a class
+//     public function __construct($description)
+//     {
+//         // Automatically triggered on instantiation
+//         // Setting a property in this instance (object)
+//         $this->description = $description;
+//     }
+//
+//     public function isCompleted()
+//     {
+//         return $this->completed;
+//     }
+//
+//     public function complete()
+//     {
+//         $this->completed = true;
+//     }
+//
+//
+// }
+//
+// $tasks = [
+//     new Task('Go to the store'),
+//     new Task('Finish learning stuff'),
+//     new Task('Slacklining')
+// ];
+//
+// $tasks[0]->complete();
 
 
 
@@ -62,7 +76,6 @@ $tasks[0]->complete();
 
 //die(var_dump($animals));
 
-require 'index.view.php';
 // $person = [
 //         'age' => 31,
 //         'hair' => 'blond',
