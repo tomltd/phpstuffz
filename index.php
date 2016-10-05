@@ -1,11 +1,64 @@
 <?php
-
 require 'functions.php';
 
-$animals = ['cat', 'dog', 'wombat', 'wallaby'];
+
+class Task {
+
+    public $description;
+    public $completed = false;
+
+    // A method if defined in a class
+    public function __construct($description)
+    {
+        // Automatically triggered on instantiation
+        // Setting a property in this instance (object)
+        $this->description = $description;
+    }
+
+    public function isCompleted()
+    {
+        return $this->completed;
+    }
+
+    public function complete()
+    {
+        $this->completed = true;
+    }
 
 
-dd($animals);
+}
+
+$tasks = [
+    new Task('Go to the store'),
+    new Task('Finish learning stuff'),
+    new Task('Slacklining')
+];
+
+$tasks[0]->complete();
+
+
+
+
+
+// a new task object
+// $task = new Task('Go to the store');
+
+//var_dump($task->isCompleted());
+
+// completed the task
+// $task->complete();
+
+//var_dump($task->isCompleted());
+
+
+//dd($task);
+
+// require 'functions.php';
+//
+// $animals = ['cat', 'dog', 'wombat', 'wallaby'];
+//
+//
+// dd($animals);
 
 //die(var_dump($animals));
 
