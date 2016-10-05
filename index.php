@@ -5,7 +5,6 @@ require 'functions.php';
 $animals = ['cat', 'dog', 'wombat', 'wallaby'];
 
 
-
 dd($animals);
 
 //die(var_dump($animals));
