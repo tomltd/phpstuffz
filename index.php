@@ -8,6 +8,13 @@ try {
     die('Could not connect');
 }
 
+
+$statement = $pdo->prepare('select * from todos');
+
+$statement->execute();
+
+var_dump($statement->fetchAll());
+
 require 'index.view.php';
 
 
