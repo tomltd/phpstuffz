@@ -13,7 +13,8 @@ $statement = $pdo->prepare('select * from todos');
 
 $statement->execute();
 
-var_dump($statement->fetchAll());
+// Fetch as an object
+var_dump($statement->fetchAll(PDO::FETCH_OBJ));
 
 require 'index.view.php';
 
