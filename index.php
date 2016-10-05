@@ -1,21 +1,15 @@
 <?php
 
 require 'functions.php';
+require 'task.php';
 
-try {
-    $pdo = new PDO('mysql:host=192.168.10.10;dbname=mytodos2', 'mytodos2', 'mytodos2');
-} catch (PDOexception $e) {
-    die($e->getMessage());
-}
+$pdo = connectToDb();
+
+$tasks = fetchAllTasks($pdo);
 
 
-$statement = $pdo->prepare('select * from todos');
 
-$statement->execute();
 
-// Fetch as an object
-
-$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 
 
 var_dump($tasks[0]->description);
