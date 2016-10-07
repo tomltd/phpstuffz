@@ -3,12 +3,13 @@
 // Get the database config, username etc and pass it down the the static method at the bottom
 $config = require 'config.php';
 
+require 'core/Router.php';
 
-require 'database/Connection.php';
+require 'core/database/Connection.php';
 
-require 'database/QueryBuilder.php';
+require 'core/database/QueryBuilder.php';
 
-require 'functions.php';
+require 'core/functions.php';
 
 
 // Call the static method

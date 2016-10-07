@@ -2,15 +2,14 @@
 
 $database = require 'bootstrap.php';
 
+$router = new Router;
+
+require 'routes.php';
+
+require $router->direct();
+
+
 // Fetch all the todos and map them into instances of Task
-$tasks = $database->selectAll('todos');
-
-
-//dd($tasks);
-
-//var_dump($tasks[0]->description);
-
-require 'index.view.php';
 
 
 
