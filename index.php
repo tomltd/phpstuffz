@@ -1,9 +1,9 @@
 <?php
 
-$query = require 'bootstrap.php';
+$database = require 'bootstrap.php';
 
 // Fetch all the todos and map them into instances of Task
-$tasks = $query->selectAll('todos', 'Task');
+$tasks = $database->selectAll('todos', 'Task');
 
 
 //dd($tasks);
