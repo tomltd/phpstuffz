@@ -10,8 +10,6 @@ require 'database/QueryBuilder.php';
 
 require 'functions.php';
 
-require 'Task.php';
-
 
 // Call the static method
 //$pdo = Connection::make();

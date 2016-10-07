@@ -3,7 +3,7 @@
 $database = require 'bootstrap.php';
 
 // Fetch all the todos and map them into instances of Task
-$tasks = $database->selectAll('todos', 'Task');
+$tasks = $database->selectAll('todos');
 
 
 //dd($tasks);
