@@ -10,6 +10,9 @@ require 'Task.php';
 
 
 // Call the static method
-$pdo = Connection::make();
+//$pdo = Connection::make();
 
-$query = new QueryBuilder($pdo);
+// Call the static method inline
+return new QueryBuilder(
+    Connection::make()
+);

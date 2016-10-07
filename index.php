@@ -1,12 +1,14 @@
 <?php
 
-require 'bootstrap.php';
+$query = require 'bootstrap.php';
+
+// Fetch all the todos and map them into instances of Task
+$tasks = $query->selectAll('todos', 'Task');
 
 
-$tasks = $query->selectAll('todos');
+//dd($tasks);
 
-
-var_dump($tasks[0]->description);
+//var_dump($tasks[0]->description);
 
 require 'index.view.php';
 
