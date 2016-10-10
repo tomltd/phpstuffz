@@ -1,18 +1,16 @@
 <?php
 
-$database = require 'core/bootstrap.php';
+require 'core/bootstrap.php';
 
 // $router = new Router;
 //
 // require 'routes.php';
 
-$uri = trim($_SERVER['REQUEST_URI'], '/');
-
 // require $router->direct($uri);
 
-$router = Router::load('routes.php');
+require Router::load('routes.php')
 
-require $router->direct($uri);
+    ->direct(Request::uri());
 
 
 // Fetch all the todos and map them into instances of Task

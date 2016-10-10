@@ -1,7 +1,7 @@
 <?php
 
 
-$tasks = $database->selectAll('todos');
+$tasks = $app['database']->selectAll('todos');
 
 
 //dd($tasks);
