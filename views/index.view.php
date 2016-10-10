@@ -38,12 +38,16 @@ $posts = [
 
     ];
 
-    $modified = array_map(function($post) {
-        $post->published = true;
-        return $post;
-    }, $posts);
+    $titles = array_column($posts, 'title');
 
-var_dump($modified);
+    var_dump($titles);
+
+//     $modified = array_map(function($post) {
+//         $post->published = true;
+//         return $post;
+//     }, $posts);
+//
+// var_dump($modified);
 
 //var_dump($posts);
 
