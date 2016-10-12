@@ -1,8 +1,28 @@
 <?php require('partials/header.php'); ?>
 
 
-    <h1>Hello</h1>
-    <ul>
+    <h1>Submit Your Name</h1>
+
+
+    <form method="POST" action="/names">
+
+        <input name="name"></input>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <ul>
         <?php foreach ($tasks as $task) : ?>
             <li>
                 <?php if ($task->completed) : ?>
@@ -13,35 +33,9 @@
             </li>
         <?php endforeach; ?>
 
-    </ul>
+    </ul> -->
 
-<?php
-
-class Post
-{
-    public $title;
-    public $published;
-
-    public function __construct($title, $published)
-
-    {
-        $this->title = $title;
-        $this->published = $published;
-    }
-}
-
-$posts = [
-        new Post('My First Post', true),
-        new Post('My Second Post', true),
-        new Post('My Third Post', true),
-        new Post('My Fourth Post', false),
-
-    ];
-
-    $titles = array_column($posts, 'title');
-
-    var_dump($titles);
-
+<!--
 //     $modified = array_map(function($post) {
 //         $post->published = true;
 //         return $post;
@@ -62,10 +56,7 @@ $posts = [
 // });
 
 // var_dump($publishedPosts);
+-->
 
-
-
-
-?>
 
     <?php require('partials/footer.php'); ?>
