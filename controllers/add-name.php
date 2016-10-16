@@ -3,7 +3,8 @@
 //var_dump('You typed ' . $_POST['name']);
 
 $app['database']->insert('users', [
-    'name' => $_POST['name']
+    'name' => $_POST['name'],
+    'age' => $_POST['age']
 ]);
 
 // Redirect to the homepage

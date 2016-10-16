@@ -3,7 +3,7 @@
     <ul>
         <?php foreach ($users as $user) : ?>
 
-            <li><?= $user->name; ?></li>
+            <li><?= $user->name . ' age: ' . $user->age; ?></li>
 
         <?php endforeach; ?>
     </ul>
@@ -13,6 +13,8 @@
     <form method="POST" action="/names">
 
         <input name="name"></input>
+        <h2>Age</h2>
+        <input name="age"></input>
 
         <button type="submit">Submit</button>
 
