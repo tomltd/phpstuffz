@@ -3,6 +3,9 @@
 
 $tasks = $app['database']->selectAll('todos');
 
+$users = $app['database']->selectAll('users');
+
+
 
 //dd($tasks);
 
