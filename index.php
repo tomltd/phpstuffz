@@ -1,5 +1,8 @@
 <?php
 
+// load all the classes via composer autoload
+require 'vendor/autoload.php';
+
 require 'core/bootstrap.php';
 
 // $router = new Router;
