@@ -1,8 +1,19 @@
 <?php
 
-$app = [];
 
-$app['config'] = require 'config.php';
+App::bind('config', require 'config.php');
+
+die(var_dump(App::get('config')));
+
+
+// Call the static method inline
+App::bind('database', new QueryBuilder(
+    Connection::make(App::get('config')['database'])
+));
+
+
+
+
 
 // Get the database config, username etc and pass it down the the static method at the bottom
 
@@ -19,8 +30,3 @@ $app['config'] = require 'config.php';
 
 // Call the static method
 //$pdo = Connection::make();
-
-// Call the static method inline
-$app['database'] = new QueryBuilder(
-    Connection::make($app['config']['database'])
-);

@@ -15,11 +15,11 @@ input {
     border-radius: 0.5rem;
     border: 4px solid white;
     transition: all 500ms ease;
+}
 
-    &:focus {
-        border-color: #008e7e;
-        outline: none;
-    }
+input:focus {
+    border-color: #008e7e;
+    outline: none;
 }
 
 </style>
