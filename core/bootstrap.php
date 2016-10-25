@@ -1,9 +1,9 @@
 <?php
 
-
+// Put these items in the Dependancy Injectin container
 App::bind('config', require 'config.php');
 
-die(var_dump(App::get('config')));
+// die(var_dump(App::get('config')));
 
 
 // Call the static method inline
