@@ -1,7 +1,7 @@
 <?php require('partials/header.php'); ?>
 
 <body>
-    <h1>About</h1>
+    <h1>About <?= $company; ?></h1>
 
 
 

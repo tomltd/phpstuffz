@@ -1,6 +1,8 @@
 <?php require('partials/header.php'); ?>
 
-    <ul>
+<h1>Home Page</h1>
+
+    <!-- <ul>
         <?php foreach ($users as $user) : ?>
 
             <li><?= $user->name; ?></li>
@@ -17,7 +19,7 @@
         <button type="submit">Submit</button>
 
     </form>
-
+ -->
 
 
 

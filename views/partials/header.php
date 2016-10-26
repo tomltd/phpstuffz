@@ -13,7 +13,7 @@ input {
     padding: 0.5rem;
     background-color: white;
     border-radius: 0.5rem;
-    border: 4px solid white;
+    border: 4px solid lightblue;
     transition: all 500ms ease;
 }
 

@@ -6,22 +6,23 @@ class PagesController
     public function home()
     {
         //die('home');
-        $users = App::get('database')->selectAll('users');
+        //$users = App::get('database')->selectAll('users');
 
-        require 'views/index.view.php';
+        return view('index');
     }
 
     public function about()
     {
-        require 'views/about.view.php';
 
+        $company = "Tomltd";
+
+        return view('about', ['company' => $company]);
 
     }
 
     public function contact()
     {
-        require 'views/contact.view.php';
-
+        return view('contact');
     }
 
 
